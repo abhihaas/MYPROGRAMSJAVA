@@ -1,0 +1,27 @@
+package leetcode;
+
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.Scanner;
+
+public class removeduplicatesfromsortedarray {
+	//input1==[0,1,1,2,2,3,3,3,4]
+  //output1=[0,1,2,3,4,0,0,0,0]
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int arr[]= {0,1,2,3,3,3,4};
+		int a[]=new int[arr.length];
+		int len=arr.length;
+		int j=0;
+		for(int i=0;i<len-1;i++) {//i=0,1,2
+			if(arr[i]!=arr[i+1]) {//2,3
+				a[j]=arr[i];// 2
+				j++;//1,2
+			}
+		}
+		a[j++]=arr[len-1];
+		System.out.println(Arrays.toString(a));
+		}
+		
+	}
+
