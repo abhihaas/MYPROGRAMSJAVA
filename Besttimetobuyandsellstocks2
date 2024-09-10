@@ -1,0 +1,33 @@
+package leetcode;
+
+import java.util.Scanner;
+
+public class besttimetobuyandpurchasestocks {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter size of an array");
+		int n=sc.nextInt();
+		int arr[]=new int[n];
+		for(int i=0;i<n;i++) {
+			arr[i]=sc.nextInt();
+		}
+		int k=maxProfit(arr);
+		System.out.println(k);
+
+	}
+	public static int maxProfit(int[] prices) {
+        int maxp=0;
+        for(int i=1;i<prices.length;i++){
+            
+            if(prices[i]>prices[i-1]){
+                maxp+=prices[i]-prices[i-1];
+            }
+
+            }
+            
+        return maxp;
+    }
+
+}
